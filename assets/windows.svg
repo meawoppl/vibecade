@@ -1,1 +1,157 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480"><rect width="1200" height="480" fill="#1a1b26"/><path d="M30 98H1170V389H30Z" fill="#202333" stroke="#565f89" stroke-width="2"/><path d="M18 88H1182M18 399H1182" stroke="#565f89" stroke-width="6"/><rect x="60" y="148" width="145" height="185" rx="2" fill="#0d111b" stroke="#7dcfff" stroke-width="3"/><rect x="70" y="304" width="21" height="21" rx="2" fill="#7dcfff"/><rect x="70" y="279" width="21" height="21" rx="2" fill="#7dcfff"/><rect x="95" y="304" width="21" height="21" rx="2" fill="#bb9af7"/><rect x="95" y="279" width="21" height="21" rx="2" fill="#bb9af7"/><rect x="95" y="254" width="21" height="21" rx="2" fill="#bb9af7"/><rect x="120" y="304" width="21" height="21" rx="2" fill="#9ece6a"/><rect x="145" y="304" width="21" height="21" rx="2" fill="#e0af68"/><rect x="145" y="279" width="21" height="21" rx="2" fill="#e0af68"/><rect x="145" y="254" width="21" height="21" rx="2" fill="#e0af68"/><rect x="145" y="229" width="21" height="21" rx="2" fill="#e0af68"/><rect x="170" y="304" width="21" height="21" rx="2" fill="#f7768e"/><rect x="170" y="279" width="21" height="21" rx="2" fill="#f7768e"/><path d="M95 174h22v22h22v22h-44Z" fill="#7dcfff"/><rect x="223" y="148" width="145" height="185" rx="2" fill="#0d111b" stroke="#bb9af7" stroke-width="3"/><rect x="233" y="304" width="21" height="21" rx="2" fill="#bb9af7"/><rect x="233" y="279" width="21" height="21" rx="2" fill="#bb9af7"/><rect x="258" y="304" width="21" height="21" rx="2" fill="#9ece6a"/><rect x="258" y="279" width="21" height="21" rx="2" fill="#9ece6a"/><rect x="258" y="254" width="21" height="21" rx="2" fill="#9ece6a"/><rect x="283" y="304" width="21" height="21" rx="2" fill="#e0af68"/><rect x="308" y="304" width="21" height="21" rx="2" fill="#f7768e"/><rect x="308" y="279" width="21" height="21" rx="2" fill="#f7768e"/><rect x="308" y="254" width="21" height="21" rx="2" fill="#f7768e"/><rect x="308" y="229" width="21" height="21" rx="2" fill="#f7768e"/><rect x="333" y="304" width="21" height="21" rx="2" fill="#7aa2f7"/><rect x="333" y="279" width="21" height="21" rx="2" fill="#7aa2f7"/><path d="M258 174h22v22h22v22h-44Z" fill="#bb9af7"/><rect x="386" y="148" width="145" height="185" rx="2" fill="#0d111b" stroke="#9ece6a" stroke-width="3"/><circle cx="404" cy="172" r="3" fill="#7dcfff"/><circle cx="441" cy="201" r="4" fill="#bb9af7"/><circle cx="478" cy="230" r="5" fill="#9ece6a"/><circle cx="515" cy="259" r="6" fill="#e0af68"/><circle cx="440" cy="288" r="7" fill="#f7768e"/><circle cx="477" cy="177" r="3" fill="#7aa2f7"/><circle cx="514" cy="206" r="4" fill="#7dcfff"/><circle cx="439" cy="235" r="5" fill="#bb9af7"/><circle cx="476" cy="264" r="6" fill="#9ece6a"/><circle cx="513" cy="293" r="7" fill="#e0af68"/><circle cx="438" cy="182" r="3" fill="#f7768e"/><rect x="666" y="148" width="145" height="185" rx="2" fill="#0d111b" stroke="#e0af68" stroke-width="3"/><circle cx="684" cy="172" r="3" fill="#7dcfff"/><circle cx="721" cy="201" r="4" fill="#bb9af7"/><circle cx="758" cy="230" r="5" fill="#9ece6a"/><circle cx="795" cy="259" r="6" fill="#e0af68"/><circle cx="720" cy="288" r="7" fill="#f7768e"/><circle cx="757" cy="177" r="3" fill="#7aa2f7"/><circle cx="794" cy="206" r="4" fill="#7dcfff"/><circle cx="719" cy="235" r="5" fill="#bb9af7"/><circle cx="756" cy="264" r="6" fill="#9ece6a"/><circle cx="793" cy="293" r="7" fill="#e0af68"/><circle cx="718" cy="182" r="3" fill="#f7768e"/><rect x="829" y="148" width="145" height="185" rx="2" fill="#0d111b" stroke="#f7768e" stroke-width="3"/><path d="M852 242h100" stroke="#565f89" stroke-dasharray="4 6"/><circle cx="877" cy="215" r="17" fill="#f7768e"/><circle cx="933" cy="279" r="9" fill="#e0af68"/><path d="M853 275v35M947 170v35" stroke="#f7768e" stroke-width="9"/><rect x="992" y="148" width="145" height="185" rx="2" fill="#0d111b" stroke="#7aa2f7" stroke-width="3"/><path d="M1015 242h100" stroke="#565f89" stroke-dasharray="4 6"/><circle cx="1040" cy="215" r="17" fill="#7aa2f7"/><circle cx="1096" cy="279" r="9" fill="#e0af68"/><path d="M1016 275v35M1110 170v35" stroke="#7aa2f7" stroke-width="9"/><rect x="556" y="195" width="94" height="194" fill="#111520" stroke="#565f89"/><path d="M568 208h70v110h-70Z" fill="#202333"/><circle cx="632" cy="340" r="3" fill="#e0af68"/><text x="603" y="177" text-anchor="middle" fill="#c0caf5" font-family="monospace" font-size="18">2051</text><path d="M0 443H1200" stroke="#565f89"/><text x="60" y="125" fill="#c0caf5" font-family="monospace" font-size="16" letter-spacing="5">VIBECADE / THE SIDEWALK IS PLAYER TWO</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480">
+  <rect width="1200" height="480" fill="#1a1b26" />
+  <path
+    d="M30 98H1170V389H30Z"
+    fill="#202333"
+    stroke="#565f89"
+    stroke-width="2"
+  />
+  <path d="M18 88H1182M18 399H1182" stroke="#565f89" stroke-width="6" />
+  <rect
+    x="60"
+    y="148"
+    width="145"
+    height="185"
+    rx="2"
+    fill="#0d111b"
+    stroke="#7dcfff"
+    stroke-width="3"
+  />
+  <rect x="70" y="304" width="21" height="21" rx="2" fill="#7dcfff" />
+  <rect x="70" y="279" width="21" height="21" rx="2" fill="#7dcfff" />
+  <rect x="95" y="304" width="21" height="21" rx="2" fill="#bb9af7" />
+  <rect x="95" y="279" width="21" height="21" rx="2" fill="#bb9af7" />
+  <rect x="95" y="254" width="21" height="21" rx="2" fill="#bb9af7" />
+  <rect x="120" y="304" width="21" height="21" rx="2" fill="#9ece6a" />
+  <rect x="145" y="304" width="21" height="21" rx="2" fill="#e0af68" />
+  <rect x="145" y="279" width="21" height="21" rx="2" fill="#e0af68" />
+  <rect x="145" y="254" width="21" height="21" rx="2" fill="#e0af68" />
+  <rect x="145" y="229" width="21" height="21" rx="2" fill="#e0af68" />
+  <rect x="170" y="304" width="21" height="21" rx="2" fill="#f7768e" />
+  <rect x="170" y="279" width="21" height="21" rx="2" fill="#f7768e" />
+  <path d="M95 174h22v22h22v22h-44Z" fill="#7dcfff" />
+  <rect
+    x="223"
+    y="148"
+    width="145"
+    height="185"
+    rx="2"
+    fill="#0d111b"
+    stroke="#bb9af7"
+    stroke-width="3"
+  />
+  <rect x="233" y="304" width="21" height="21" rx="2" fill="#bb9af7" />
+  <rect x="233" y="279" width="21" height="21" rx="2" fill="#bb9af7" />
+  <rect x="258" y="304" width="21" height="21" rx="2" fill="#9ece6a" />
+  <rect x="258" y="279" width="21" height="21" rx="2" fill="#9ece6a" />
+  <rect x="258" y="254" width="21" height="21" rx="2" fill="#9ece6a" />
+  <rect x="283" y="304" width="21" height="21" rx="2" fill="#e0af68" />
+  <rect x="308" y="304" width="21" height="21" rx="2" fill="#f7768e" />
+  <rect x="308" y="279" width="21" height="21" rx="2" fill="#f7768e" />
+  <rect x="308" y="254" width="21" height="21" rx="2" fill="#f7768e" />
+  <rect x="308" y="229" width="21" height="21" rx="2" fill="#f7768e" />
+  <rect x="333" y="304" width="21" height="21" rx="2" fill="#7aa2f7" />
+  <rect x="333" y="279" width="21" height="21" rx="2" fill="#7aa2f7" />
+  <path d="M258 174h22v22h22v22h-44Z" fill="#bb9af7" />
+  <rect
+    x="386"
+    y="148"
+    width="145"
+    height="185"
+    rx="2"
+    fill="#0d111b"
+    stroke="#9ece6a"
+    stroke-width="3"
+  />
+  <circle cx="404" cy="172" r="3" fill="#7dcfff" />
+  <circle cx="441" cy="201" r="4" fill="#bb9af7" />
+  <circle cx="478" cy="230" r="5" fill="#9ece6a" />
+  <circle cx="515" cy="259" r="6" fill="#e0af68" />
+  <circle cx="440" cy="288" r="7" fill="#f7768e" />
+  <circle cx="477" cy="177" r="3" fill="#7aa2f7" />
+  <circle cx="514" cy="206" r="4" fill="#7dcfff" />
+  <circle cx="439" cy="235" r="5" fill="#bb9af7" />
+  <circle cx="476" cy="264" r="6" fill="#9ece6a" />
+  <circle cx="513" cy="293" r="7" fill="#e0af68" />
+  <circle cx="438" cy="182" r="3" fill="#f7768e" />
+  <rect
+    x="666"
+    y="148"
+    width="145"
+    height="185"
+    rx="2"
+    fill="#0d111b"
+    stroke="#e0af68"
+    stroke-width="3"
+  />
+  <circle cx="684" cy="172" r="3" fill="#7dcfff" />
+  <circle cx="721" cy="201" r="4" fill="#bb9af7" />
+  <circle cx="758" cy="230" r="5" fill="#9ece6a" />
+  <circle cx="795" cy="259" r="6" fill="#e0af68" />
+  <circle cx="720" cy="288" r="7" fill="#f7768e" />
+  <circle cx="757" cy="177" r="3" fill="#7aa2f7" />
+  <circle cx="794" cy="206" r="4" fill="#7dcfff" />
+  <circle cx="719" cy="235" r="5" fill="#bb9af7" />
+  <circle cx="756" cy="264" r="6" fill="#9ece6a" />
+  <circle cx="793" cy="293" r="7" fill="#e0af68" />
+  <circle cx="718" cy="182" r="3" fill="#f7768e" />
+  <rect
+    x="829"
+    y="148"
+    width="145"
+    height="185"
+    rx="2"
+    fill="#0d111b"
+    stroke="#f7768e"
+    stroke-width="3"
+  />
+  <path d="M852 242h100" stroke="#565f89" stroke-dasharray="4 6" />
+  <circle cx="877" cy="215" r="17" fill="#f7768e" />
+  <circle cx="933" cy="279" r="9" fill="#e0af68" />
+  <path d="M853 275v35M947 170v35" stroke="#f7768e" stroke-width="9" />
+  <rect
+    x="992"
+    y="148"
+    width="145"
+    height="185"
+    rx="2"
+    fill="#0d111b"
+    stroke="#7aa2f7"
+    stroke-width="3"
+  />
+  <path d="M1015 242h100" stroke="#565f89" stroke-dasharray="4 6" />
+  <circle cx="1040" cy="215" r="17" fill="#7aa2f7" />
+  <circle cx="1096" cy="279" r="9" fill="#e0af68" />
+  <path d="M1016 275v35M1110 170v35" stroke="#7aa2f7" stroke-width="9" />
+  <rect
+    x="556"
+    y="195"
+    width="94"
+    height="194"
+    fill="#111520"
+    stroke="#565f89"
+  />
+  <path d="M568 208h70v110h-70Z" fill="#202333" />
+  <circle cx="632" cy="340" r="3" fill="#e0af68" />
+  <text
+    x="603"
+    y="177"
+    text-anchor="middle"
+    fill="#c0caf5"
+    font-family="monospace"
+    font-size="18"
+  >
+    2051
+  </text>
+  <path d="M0 443H1200" stroke="#565f89" />
+  <text
+    x="60"
+    y="125"
+    fill="#c0caf5"
+    font-family="monospace"
+    font-size="16"
+    letter-spacing="5"
+  >
+    VIBECADE / THE SIDEWALK IS PLAYER TWO
+  </text>
+</svg>
