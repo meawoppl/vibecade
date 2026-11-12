@@ -1,37 +1,23 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Window not found — Vibecade</title>
-    <style>
-      body {
-        margin: 0;
-        padding: 15vh 8vw;
-        background: #1a1b26;
-        color: #f1f0e8;
-        font:
-          20px/1.6 Arial,
-          sans-serif;
-      }
-      h1 {
-        font-size: clamp(40px, 8vw, 90px);
-        line-height: 1.1;
-      }
-      a {
-        color: #c2f970;
-      }
-      a:focus-visible {
-        outline: 3px solid #7dcfff;
-      }
-    </style>
-  </head>
-  <body>
-    <main>
-      <p>VIBECADE / 404</p>
-      <h1>This window is dark.</h1>
-      <p>That page isn’t here. The arcade is still taking shape.</p>
-      <a href="/vibecade/">Back to Vibecade →</a>
-    </main>
-  </body>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090b16">
+<title>Vibecade: this window is dark</title>
+<link rel="icon" href="/vibecade/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/vibecade/style.css">
+</head>
+<body>
+<main class="lost">
+  <div>
+    <p class="eyebrow" style="justify-content:center">404 / wrong window</p>
+    <h1 style="font-size:clamp(40px,8vw,84px)">This window<br>is <em>dark.</em></h1>
+    <canvas id="lost" aria-label="A small game: move your pointer or finger to steer the green firefly and catch sparks."></canvas>
+    <p id="lost-score" class="fine" style="margin-inline:auto">Move your pointer or finger to catch some sparks.</p>
+    <p style="margin-top:26px"><a class="btn primary" href="/vibecade/">Back to the arcade</a></p>
+  </div>
+</main>
+<script src="/vibecade/arcade.js" defer></script>
+</body>
 </html>

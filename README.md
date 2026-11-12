@@ -1,21 +1,31 @@
 # Vibecade
 
-A static, public-facing introduction to the window arcade. Local review only; nothing has been published. Open `index.html` directly, or serve this directory with any static HTTP server. There is no build step, JavaScript, third-party font, tracker or runtime dependency.
+The public page for Vibecade, a free phone-controlled arcade projected onto six street windows at 2051 Harrison St, San Francisco. Static files only: no build step, no dependencies, no external fonts, CDNs or trackers.
 
-## Editing
+## Files
 
-- `index.html`: visitor information, planned build, sixteen-game lineup and neighbor policy.
-- `style.css`: responsive presentation, keyboard focus and reduced-motion support.
-- `assets/`: original SVG illustration and favicon. Illustrations are explicitly labelled, not screenshots.
-- Search for `CONTACT_EMAIL` in the HTML for the single future email insertion point.
-- `404.html`: standalone error page; its home link targets the intended `/vibecade/` Pages path. Update that link if the deployment path changes.
+- `index.html`: the page. Sections: hero street scene, playable demo, how to visit, the sixteen-game lineup, the build, neighbors.
+- `style.css`: layout and look. System font stacks only.
+- `arcade.js`: everything that moves.
+  - `SIMS`: sixteen small game simulations drawn on canvas. Fireflies, Volley and Neon Blocks accept input and are playable in the demo; the rest are animated previews.
+  - `Street`: the hero scene. Sky, building, six windows running simulations, people on the sidewalk.
+  - `clock`: one shared time of day (3 pm to 12:30 am) that drives the hero scene, the status chip and the neighbors timeline. Dusk is approximated from the date.
+  - Opt-in sound (WebAudio), off by default.
+- `404.html`: a small firefly game. Its links use the `/vibecade/` path that GitHub Pages will serve from.
+- `assets/`: favicon, share image (`og.png`), and a static illustration used when JavaScript is off.
 
-## Before publication
+## Behavior to keep
 
-Confirm address, free-play policy, guest joining steps, crowd capacity and queue rotation, pilot status, hardware arrival week, six-pane build description, game lineup, planned hours and sound policy. Remove or update the hardware-arrival sentence as it ages. Create the public repository and enable issues before relying on the contact link. No opening date is promised. Open Graph title/description are present; add the final absolute canonical URL and social preview image URL after a public hostname is selected.
+- Works from a subpath with relative URLs.
+- With JavaScript off the page is still complete; the canvas scene falls back to a static illustration and the time controls stay hidden.
+- With reduced motion on, nothing animates on its own; the scene redraws only when the time changes, and the demo runs only while someone is playing.
+- The previews are labelled as stylized illustrations, not screenshots, and the demo is labelled as written for this page.
+- Search for `CONTACT_EMAIL` in `index.html` for the one place to add a public email.
 
-Publish this directory as static files only after review. All page assets use relative URLs for `/vibecade/` hosting. The MIT copyright holder is retained from the existing project’s holder line.
+## Before publishing
 
-## Verification
+Confirm with the owner: address, free-play wording, the 24-player figure, planned hours and sound policy, and the game lineup. Create the public repository and enable issues before relying on the contact link. `og:image` is a relative URL; make it absolute once the public hostname is known.
 
-Chromium checked at 375, 390, 768 and 1440 pixel viewport widths, including visual review of full-page phone and desktop captures. Checks passed for document overflow, image loading, all sixteen gallery entries, section anchors, the 404 return link and reduced-motion scrolling. No browser page errors. No hosted repository or deployment was created.
+## Checking changes
+
+Serve the directory with any static server and open it at phone and desktop widths. The page should show no console errors and no horizontal scroll, the time slider should move through four states (resting, speakers, phones only, dark), each demo game should respond to the arrow keys and space bar after pressing Start, and tapping a game card should open its detail sheet.
