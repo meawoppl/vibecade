@@ -308,6 +308,70 @@ SIMS.orchestra = timed(C.violet, (g, s, t) => {
   }
 });
 
+/* people and the figures they control */
+const fig = (g, x, y, h, c, la, ra, glow = 0, lean = 0) => {
+  const hip = y - h * 0.42, sh = y - h * 0.78, sx = x + lean * h * 0.5, w = h * 0.085, arm = h * 0.3;
+  g.shadowColor = c; g.shadowBlur = glow;
+  seg(g, x, hip, x - h * 0.1, y, w, c, glow); seg(g, x, hip, x + h * 0.1, y, w, c, glow);
+  seg(g, x, hip, sx, sh, w * 1.5, c, glow);
+  seg(g, sx, sh, sx - Math.cos(la) * arm, sh - Math.sin(la) * arm, w, c, glow);
+  seg(g, sx, sh, sx + Math.cos(ra) * arm, sh - Math.sin(ra) * arm, w, c, glow);
+  dot(g, sx, sh - h * 0.14, h * 0.085, c, glow);
+  return [[sx - Math.cos(la) * arm, sh - Math.sin(la) * arm], [sx + Math.cos(ra) * arm, sh - Math.sin(ra) * arm]];
+};
+const pane = (g, s, x, y, w, h) => { box(g, x * s, y * s, w * s, h * s, s * 0.012, '#0d1030'); g.strokeStyle = '#3a4080'; g.lineWidth = s * 0.012; g.strokeRect(x * s, y * s, w * s, h * s); };
+const walk = (g, s) => { seg(g, 0, 0.955 * s, s, 0.955 * s, s * 0.006, 'rgba(255,255,255,.18)'); };
+
+SIMS.mirror = () => {
+  let t = rnd(10), la = 0.4, ra = 0.4; const tr = [];
+  const S = {
+    color: C.lime, aim: null,
+    step(dt) {
+      t += dt;
+      let tl = 0.3 + 1.0 * (0.5 + 0.5 * Math.sin(t * 2.2)), trg = 0.3 + 1.0 * (0.5 + 0.5 * Math.sin(t * 2.2 + 2));
+      if (S.aim) { tl = clamp(1.5 - S.aim.y * 2.2 + (0.5 - S.aim.x) * 1.4, -0.9, 1.5); trg = clamp(1.5 - S.aim.y * 2.2 - (0.5 - S.aim.x) * 1.4, -0.9, 1.5); }
+      la += (tl - la) * Math.min(1, dt * 9); ra += (trg - ra) * Math.min(1, dt * 9);
+    },
+    draw(g, s) {
+      pane(g, s, 0.36, 0.06, 0.58, 0.72); walk(g, s);
+      const hands = fig(g, 0.65 * s, 0.74 * s, 0.56 * s, C.lime, la, ra, s * 0.06);
+      hands.forEach((h) => { tr.push([h[0] / s, h[1] / s, 1]); });
+      while (tr.length > 44) tr.shift();
+      tr.forEach((p, i) => dot(g, p[0] * s, p[1] * s, s * 0.008, rgba(i % 2 ? C.amber : C.pink, (i / tr.length) * 0.7)));
+      fig(g, 0.2 * s, 0.95 * s, 0.4 * s, '#cfd3f5', la, ra);
+      g.setLineDash([s * 0.012, s * 0.02]); seg(g, 0.27 * s, 0.6 * s, 0.4 * s, 0.5 * s, s * 0.005, rgba(C.lime, 0.5 + 0.4 * Math.sin(t * 5))); g.setLineDash([]);
+    },
+  };
+  return S;
+};
+
+SIMS.steer = timed(C.cyan, (g, s, t) => {
+  const sway = Math.sin(t * 0.9) * 0.2 + Math.sin(t * 0.37) * 0.07, cx = 0.5 + sway;
+  pane(g, s, 0.05, 0.05, 0.9, 0.5); walk(g, s);
+  g.save(); g.beginPath(); g.rect(0.05 * s, 0.05 * s, 0.9 * s, 0.5 * s); g.clip();
+  for (let i = 0; i < 16; i++) { const y = ((t * 0.25 + i * 0.137) % 1) * 0.5 + 0.05, x = 0.08 + ((i * 0.618) % 1) * 0.84; dot(g, x * s, y * s, s * 0.005, 'rgba(255,255,255,.5)'); }
+  for (let i = 0; i < 3; i++) { const u = (t * 0.2 + i / 3) % 1, x = 0.5 + Math.sin((t - (1 - u) * 2.2) * 0.9) * 0.2; ring(g, x * s, (0.08 + u * 0.36) * s, s * 0.045, s * 0.008, rgba(C.amber, 0.9 - u * 0.5)); }
+  for (let k = 1; k < 7; k++) dot(g, (cx - (sway - (Math.sin((t - k * 0.06) * 0.9) * 0.2 + Math.sin((t - k * 0.06) * 0.37) * 0.07))) * s, (0.46 + k * 0.012) * s, s * (0.03 - k * 0.003), rgba(C.cyan, 0.5 - k * 0.07));
+  dot(g, cx * s, 0.46 * s, s * 0.035, C.cyan, s * 0.08);
+  g.restore();
+  for (let i = 0; i < 4; i++) fig(g, (0.26 + i * 0.16 + sway * 0.55) * s, 0.95 * s, (0.3 + (i % 2) * 0.03) * s, '#cfd3f5', -0.5, -0.5, 0, sway * 0.9);
+  const dir = Math.cos(t * 0.9) > 0 ? 1 : -1; g.fillStyle = rgba(C.cyan, 0.8); g.font = `700 ${s * 0.07}px sans-serif`; g.textAlign = 'center'; g.fillText(dir > 0 ? '→' : '←', (0.5 + dir * 0.42) * s, 0.8 * s); g.textAlign = 'start';
+});
+
+SIMS.duo = timed(C.pink, (g, s, t) => {
+  pane(g, s, 0.05, 0.05, 0.9, 0.5); walk(g, s);
+  const a = [0.5 + Math.cos(t * 1.1) * 0.25, 0.3 + Math.sin(t * 1.7) * 0.14], b = [0.5 + Math.cos(t * 1.1 + 2.6) * 0.28, 0.3 + Math.sin(t * 1.3 + 1) * 0.15];
+  const k = (t * 0.5) % 1, star = [0.2 + ((Math.floor(t * 0.5) * 0.37) % 0.6), 0.14 + ((Math.floor(t * 0.5) * 0.61) % 0.3)];
+  seg(g, a[0] * s, a[1] * s, b[0] * s, b[1] * s, s * 0.008, 'rgba(255,255,255,.35)', 6);
+  dot(g, star[0] * s, star[1] * s, s * 0.02 * (1 + Math.sin(t * 8) * 0.2), C.amber, s * 0.08); ring(g, star[0] * s, star[1] * s, k * s * 0.09, s * 0.006, rgba(C.amber, 1 - k));
+  dot(g, a[0] * s, a[1] * s, s * 0.04, C.lime, s * 0.09); dot(g, b[0] * s, b[1] * s, s * 0.04, C.pink, s * 0.09);
+  [[0.33, C.lime, 0.5], [0.67, C.pink, -0.5]].forEach(([x, c, d], i) => {
+    const hands = fig(g, x * s, 0.95 * s, 0.34 * s, '#cfd3f5', i ? 0.9 : -0.2, i ? -0.2 : 0.9);
+    const h = hands[i ? 0 : 1]; g.shadowColor = c; g.shadowBlur = s * 0.05; box(g, h[0] - s * 0.016, h[1] - s * 0.03, s * 0.032, s * 0.05, s * 0.006, c); g.shadowBlur = 0;
+    for (let n = 0; n < 2; n++) { const u = (t * 0.8 + n * 0.5 + i * 0.3) % 1; dot(g, (x + (0.5 - x) * u * 0.6) * s, (0.66 - u * 0.12) * s, s * 0.008, rgba(c, 1 - u)); }
+  });
+});
+
 const make = (name) => (SIMS[name] || SIMS.fireflies)();
 const paint = (g, sim, x, y, s, alpha = 1) => {
   g.save(); g.beginPath(); g.rect(x, y, s, s); g.clip(); g.fillStyle = C.ink; g.fillRect(x, y, s, s);
@@ -534,6 +598,18 @@ function bootWall() {
   const d = $('sheet'); if (d) { d.addEventListener('close', () => sheet && (sheet.visible = false)); d.addEventListener('click', (ev) => ev.target === d && d.close()); }
 }
 
+function bootTrio() {
+  document.querySelectorAll('[data-sim]').forEach((el) => {
+    const cv = document.createElement('canvas'); cv.setAttribute('aria-hidden', 'true'); el.appendChild(cv);
+    const e = addSim(cv, make(el.dataset.sim)); for (let i = 0; i < 40; i++) e.sim.step(0.05);
+    if ('aim' in el.dataset) {
+      const set = (ev) => { const r = cv.getBoundingClientRect(); e.sim.aim = { x: (ev.clientX - r.left) / r.width, y: (ev.clientY - r.top) / r.height }; if (reduced) { e.sim.step(0.2); render(e); } };
+      cv.addEventListener('pointermove', set); cv.addEventListener('pointerdown', set);
+      cv.addEventListener('pointerleave', () => (e.sim.aim = null));
+    }
+  });
+}
+
 function bootLost() {
   const cv = $('lost'); if (!cv) return;
   const e = addSim(cv, make('fireflies')); e.visible = true;
@@ -571,7 +647,7 @@ function frame(now) {
 
 function boot() {
   document.documentElement.classList.add('js');
-  bootStreet(); bootDemo(); bootWall(); bootLost(); bootSound(); bootKonami();
+  bootStreet(); bootDemo(); bootWall(); bootTrio(); bootLost(); bootSound(); bootKonami();
   if (reduced) {
     street && street.draw();
     setTimeout(() => sims.forEach((e) => render(e)), 60);
