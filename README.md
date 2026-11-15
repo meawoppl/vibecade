@@ -4,7 +4,7 @@ The public page for Vibecade, a free phone-controlled arcade projected onto six 
 
 ## Files
 
-- `index.html`: the page. Sections: hero street scene, playable demo, how to visit, the sixteen-game lineup, the build, neighbors.
+- `index.html`: the page. Sections: hero street scene, playable demo, playing together, how to visit, the sixteen-game lineup, the build, ideas wanted, neighbors.
 - `style.css`: layout and look. System font stacks only.
 - `arcade.js`: everything that moves.
   - `SIMS`: sixteen small game simulations drawn on canvas. Fireflies, Volley and Neon Blocks accept input and are playable in the demo; the rest are animated previews.
@@ -24,7 +24,7 @@ The public page for Vibecade, a free phone-controlled arcade projected onto six 
 
 ## Getting involved
 
-Live at https://meawoppl.github.io/vibecade/. Questions, neighbor feedback and offers to help are all welcome: [open an issue](https://github.com/meawoppl/vibecade/issues/new). Ideas for new window games are especially welcome.
+Live at https://meawoppl.github.io/vibecade/. Questions, neighbor feedback and offers to help are all welcome: [open an issue](https://github.com/meawoppl/vibecade/issues/new). Ideas for what the windows could show are especially welcome, games or otherwise: movie nights, scavenger hunts, art, anything that isn't advertising.
 
 Collaborators: join the [Signal group](https://signal.group/#CjQKIG5qwFueCF-qaqTOhioCcmi90DtzoE_8ovRh37-499NJEhBf-iJCNDYFJZxIAXBF0kiO).
 
