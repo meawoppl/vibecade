@@ -11,7 +11,7 @@ The public page for Vibecade, a free phone-controlled arcade projected onto six 
   - `Street`: the hero scene. Sky, building, six windows running simulations, people on the sidewalk.
   - `clock`: one shared time of day (3 pm to 12:30 am) that drives the hero scene, the status chip and the neighbors timeline. Dusk is approximated from the date.
   - Opt-in sound (WebAudio), off by default.
-- `404.html`: a small firefly game. Its links use the `/vibecade/` path that GitHub Pages will serve from.
+- `404.html`: a small firefly game. Its links use the `/vibecade/` path that GitHub Pages serves from.
 - `assets/`: favicon, share image (`og.png`), and a static illustration used when JavaScript is off.
 
 ## Behavior to keep
@@ -22,9 +22,9 @@ The public page for Vibecade, a free phone-controlled arcade projected onto six 
 - The previews are labelled as stylized illustrations, not screenshots, and the demo is labelled as written for this page.
 - Search for `CONTACT_EMAIL` in `index.html` for the one place to add a public email.
 
-## Before publishing
+## Getting involved
 
-Confirm with the owner: address, free-play wording, the 24-player figure, planned hours and sound policy, and the game lineup. Create the public repository and enable issues before relying on the contact link. `og:image` is a relative URL; make it absolute once the public hostname is known.
+Live at https://meawoppl.github.io/vibecade/. Questions, neighbor feedback and offers to help are all welcome: [open an issue](https://github.com/meawoppl/vibecade/issues/new). Ideas for new window games are especially welcome.
 
 ## Checking changes
 
