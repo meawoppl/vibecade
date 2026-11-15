@@ -161,6 +161,8 @@ dialog form { position: absolute; right: 0; top: 0; margin: 0; z-index: 2; }
 .facts { list-style: none; padding: 0; margin: 30px 0 0; display: grid; gap: 12px; }
 .facts li { display: grid; grid-template-columns: 62px 1fr; align-items: center; gap: 14px; color: #cfd3f5; }
 .facts b { font: 800 44px/1 var(--display); color: var(--cyan); text-shadow: 0 0 26px rgba(95, 227, 255, 0.4); }
+.join { margin-top: 34px; padding: 22px; border: 1px solid var(--line); border-radius: 18px; background: linear-gradient(120deg, #1b1f45, #24153a); }
+.join p { margin: 0 0 16px; color: #cfd3f5; }
 .cutaway { margin: 0; background: #0b0d20; border: 1px solid var(--line); border-radius: 20px; padding: 18px; }
 .cut-floor { fill: #171b3a; } .cut-wall { fill: #4a4f77; } .cut-glass { fill: var(--cyan); opacity: 0.55; } .cut-screen { fill: #fff; }
 .cut-beam { fill: var(--lime); opacity: 0.16; animation: beam 3s ease-in-out infinite; } @keyframes beam { 50% { opacity: 0.3; } }

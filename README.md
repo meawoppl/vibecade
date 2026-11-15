@@ -26,6 +26,8 @@ The public page for Vibecade, a free phone-controlled arcade projected onto six 
 
 Live at https://meawoppl.github.io/vibecade/. Questions, neighbor feedback and offers to help are all welcome: [open an issue](https://github.com/meawoppl/vibecade/issues/new). Ideas for new window games are especially welcome.
 
+Collaborators: join the [Signal group](https://signal.group/#CjQKIG5qwFueCF-qaqTOhioCcmi90DtzoE_8ovRh37-499NJEhBf-iJCNDYFJZxIAXBF0kiO).
+
 ## Checking changes
 
 Serve the directory with any static server and open it at phone and desktop widths. The page should show no console errors and no horizontal scroll, the time slider should move through four states (resting, speakers, phones only, dark), each demo game should respond to the arrow keys and space bar after pressing Start, and tapping a game card should open its detail sheet.
